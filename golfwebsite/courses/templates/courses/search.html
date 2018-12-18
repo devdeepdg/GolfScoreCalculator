@@ -1,0 +1,114 @@
+{% extends 'courses/base.html' %}
+
+{% block content %}
+    <h1>Search for a Golf Course</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-light">
+            <p class='text-muted'>Search by Name, City or Country
+            <form method="GET" action="{%url 'course-search'%}">
+                <input name="q" value="{{request.GET.q}}" placeholder="search..">
+            <br>
+            <br>
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </li>
+        <!--
+        <li class="list-group-item list-group-item-light">
+            <p class='text-muted'>Search by City
+            <form method="GET" action="{%url 'course-search'%}">
+                <input name="q" value="{{request.GET.q}}" placeholder="search..">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </li>
+        <li class="list-group-item list-group-item-light">
+            <p class='text-muted'>Search by Country
+            <form method="GET" action="{%url 'course-search'%}">
+                <input name="q" value="{{request.GET.q}}" placeholder="search..">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </li>
+        -->
+    </ul>
+<br>
+
+    {% for c in courseInfo %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ c.name }}</a>
+              <small class="text-muted">{{c.city}}, {{c.country}}</small>
+            </div>
+              <!--
+            <p>Course Par {{c.par}}</p><p>Course Stroke Index {{c.strokeIndex}}</p>
+            -->
+              <table align="center">
+                  <tr>
+                      <th>Hole</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                      <th>10</th>
+                      <th>11</th>
+                      <th>12</th>
+                      <th>13</th>
+                      <th>14</th>
+                      <th>15</th>
+                      <th>16</th>
+                      <th>17</th>
+                      <th>18</th>
+                  </tr>
+                  <tr>
+                      <th>Index</th>
+                      <td class="text-muted">{{c.strokeIndex.0}}</td>
+                      <td class="text-muted">{{c.strokeIndex.1}}</td>
+                      <td class="text-muted">{{c.strokeIndex.2}}</td>
+                      <td class="text-muted">{{c.strokeIndex.3}}</td>
+                      <td class="text-muted">{{c.strokeIndex.4}}</td>
+                      <td class="text-muted">{{c.strokeIndex.5}}</td>
+                      <td class="text-muted">{{c.strokeIndex.6}}</td>
+                      <td class="text-muted">{{c.strokeIndex.7}}</td>
+                      <td class="text-muted">{{c.strokeIndex.8}}</td>
+                      <td class="text-muted">{{c.strokeIndex.9}}</td>
+                      <td class="text-muted">{{c.strokeIndex.10}}</td>
+                      <td class="text-muted">{{c.strokeIndex.11}}</td>
+                      <td class="text-muted">{{c.strokeIndex.12}}</td>
+                      <td class="text-muted">{{c.strokeIndex.13}}</td>
+                      <td class="text-muted">{{c.strokeIndex.14}}</td>
+                      <td class="text-muted">{{c.strokeIndex.15}}</td>
+                      <td class="text-muted">{{c.strokeIndex.16}}</td>
+                      <td class="text-muted">{{c.strokeIndex.17}}</td>
+                  </tr>
+                  <tr>
+                      <th>Par</th>
+                      <td class="text-muted">{{c.par.0}}</td>
+                      <td class="text-muted">{{c.par.1}}</td>
+                      <td class="text-muted">{{c.par.2}}</td>
+                      <td class="text-muted">{{c.par.3}}</td>
+                      <td class="text-muted">{{c.par.4}}</td>
+                      <td class="text-muted">{{c.par.5}}</td>
+                      <td class="text-muted">{{c.par.6}}</td>
+                      <td class="text-muted">{{c.par.7}}</td>
+                      <td class="text-muted">{{c.par.8}}</td>
+                      <td class="text-muted">{{c.par.9}}</td>
+                      <td class="text-muted">{{c.par.10}}</td>
+                      <td class="text-muted">{{c.par.11}}</td>
+                      <td class="text-muted">{{c.par.12}}</td>
+                      <td class="text-muted">{{c.par.13}}</td>
+                      <td class="text-muted">{{c.par.14}}</td>
+                      <td class="text-muted">{{c.par.15}}</td>
+                      <td class="text-muted">{{c.par.16}}</td>
+                      <td class="text-muted">{{c.par.17}}</td>
+                  </tr>
+              </table>
+          </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}}

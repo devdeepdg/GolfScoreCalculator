@@ -1,0 +1,81 @@
+{% extends 'courses/base.html' %}
+
+{% block content %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ object.name }}</a>
+              <small class="text-muted">{{object.city}}, {{object.country}}</small>
+            </div>
+              <!--
+            <p>Course Par {{c.par}}</p><p>Course Stroke Index {{c.strokeIndex}}</p>
+            -->
+              <table align="center">
+                  <tr>
+                      <th>Hole</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                      <th>10</th>
+                      <th>11</th>
+                      <th>12</th>
+                      <th>13</th>
+                      <th>14</th>
+                      <th>15</th>
+                      <th>16</th>
+                      <th>17</th>
+                      <th>18</th>
+                  </tr>
+                  <tr>
+                      <th>Index</th>
+                      <td class="text-muted">{{object.strokeIndex.0}}</td>
+                      <td class="text-muted">{{object.strokeIndex.1}}</td>
+                      <td class="text-muted">{{object.strokeIndex.2}}</td>
+                      <td class="text-muted">{{object.strokeIndex.3}}</td>
+                      <td class="text-muted">{{object.strokeIndex.4}}</td>
+                      <td class="text-muted">{{object.strokeIndex.5}}</td>
+                      <td class="text-muted">{{object.strokeIndex.6}}</td>
+                      <td class="text-muted">{{object.strokeIndex.7}}</td>
+                      <td class="text-muted">{{object.strokeIndex.8}}</td>
+                      <td class="text-muted">{{object.strokeIndex.9}}</td>
+                      <td class="text-muted">{{object.strokeIndex.10}}</td>
+                      <td class="text-muted">{{object.strokeIndex.11}}</td>
+                      <td class="text-muted">{{object.strokeIndex.12}}</td>
+                      <td class="text-muted">{{object.strokeIndex.13}}</td>
+                      <td class="text-muted">{{object.strokeIndex.14}}</td>
+                      <td class="text-muted">{{object.strokeIndex.15}}</td>
+                      <td class="text-muted">{{object.strokeIndex.16}}</td>
+                      <td class="text-muted">{{object.strokeIndex.17}}</td>
+                  </tr>
+                  <tr>
+                      <th>Par</th>
+                      <td class="text-muted">{{object.par.0}}</td>
+                      <td class="text-muted">{{object.par.1}}</td>
+                      <td class="text-muted">{{object.par.2}}</td>
+                      <td class="text-muted">{{object.par.3}}</td>
+                      <td class="text-muted">{{object.par.4}}</td>
+                      <td class="text-muted">{{object.par.5}}</td>
+                      <td class="text-muted">{{object.par.6}}</td>
+                      <td class="text-muted">{{object.par.7}}</td>
+                      <td class="text-muted">{{object.par.8}}</td>
+                      <td class="text-muted">{{object.par.9}}</td>
+                      <td class="text-muted">{{object.par.10}}</td>
+                      <td class="text-muted">{{object.par.11}}</td>
+                      <td class="text-muted">{{object.par.12}}</td>
+                      <td class="text-muted">{{object.par.13}}</td>
+                      <td class="text-muted">{{object.par.14}}</td>
+                      <td class="text-muted">{{object.par.15}}</td>
+                      <td class="text-muted">{{object.par.16}}</td>
+                      <td class="text-muted">{{object.par.17}}</td>
+                  </tr>
+              </table>
+          </div>
+        </article>
+{% endblock content %}}
+
